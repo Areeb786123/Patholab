@@ -8,7 +8,6 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,15 +15,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.areeb.patholab.Activites.Appointment;
 import com.areeb.patholab.Activites.DetailsActivity;
 import com.areeb.patholab.Adapters.home_Adapter;
 import com.areeb.patholab.ItemClicked.HomeSelectListener;
-import com.areeb.patholab.MainActivity;
 import com.areeb.patholab.Model.pathlabModel;
 import com.areeb.patholab.R;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -40,9 +36,6 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import io.grpc.internal.LogExceptionRunnable;
 
 
 public class Home extends Fragment implements HomeSelectListener {
@@ -173,18 +166,18 @@ public class Home extends Fragment implements HomeSelectListener {
     public void onHomeItemClicked(pathlabModel pathlabModelList) {
         try{
             Toast.makeText(getActivity(), pathlabModelList.getFullname().toString(), Toast.LENGTH_SHORT).show();
-            Toast.makeText(getActivity(),"phase 2", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getActivity(),"phase 2", Toast.LENGTH_SHORT).show();
             Intent DetailsIntent = new Intent(getContext(), DetailsActivity.class);
-            Toast.makeText(getActivity(),"phase 3", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getActivity(),"phase 3", Toast.LENGTH_SHORT).show();
             DetailsIntent.putExtra("Fullname", pathlabModelList.getFullname());
             DetailsIntent.putExtra("AdminEmail", pathlabModelList.getAdminEmail());
             DetailsIntent.putExtra("Phone", pathlabModelList.getPhone());
-            DetailsIntent.putExtra("AdminId", pathlabModelList.getAdminId());
+            DetailsIntent.putExtra("AdminId", pathlabModelList.getId());
 //            DetailsIntent.putExtra("ProfilePic", pathlabModelList.getProfilePic());
-
-            Toast.makeText(getActivity(), "phase 3", Toast.LENGTH_SHORT).show();
+//
+//            Toast.makeText(getActivity(), "phase 3", Toast.LENGTH_SHORT).show();
             DetailsIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            Toast.makeText(getActivity(), "phase 4", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getActivity(), "phase 4", Toast.LENGTH_SHORT).show();
             getContext().startActivity(DetailsIntent);
 
         }catch (Exception e ){

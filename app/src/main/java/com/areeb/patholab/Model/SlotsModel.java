@@ -1,8 +1,15 @@
 package com.areeb.patholab.Model;
 
 public class SlotsModel {
-    String LabName;
-    String LabEmail;
+    String AdminEmail , LabName ,Phone,otp;
+
+    public String getAdminEmail() {
+        return AdminEmail;
+    }
+
+    public void setAdminEmail(String adminEmail) {
+        AdminEmail = adminEmail;
+    }
 
     public String getLabName() {
         return LabName;
@@ -12,17 +19,29 @@ public class SlotsModel {
         LabName = labName;
     }
 
-    public String getLabEmail() {
-        return LabEmail;
+    public String getPhone() {
+        return Phone;
     }
 
-    public void setLabEmail(String labEmail) {
-        LabEmail = labEmail;
+    public void setPhone(String phone) {
+        Phone = phone;
     }
 
-    public SlotsModel(String labName, String labEmail) {
+    public String getOtp() {
+        return otp;
+    }
+
+    public void setOtp(String otp) {
+        this.otp = otp;
+    }
+
+    public SlotsModel(String adminEmail, String labName, String phone, String otp) {
+        AdminEmail = adminEmail;
         LabName = labName;
-        LabEmail = labEmail;
+        Phone = phone;
+        this.otp = otp;
     }
-    public SlotsModel(){}
+    public  SlotsModel(){
+
+    }
 }

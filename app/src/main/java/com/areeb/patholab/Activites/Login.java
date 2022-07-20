@@ -73,7 +73,7 @@ public class Login extends AppCompatActivity {
 
     }
 
-    private void loginFun() {
+    public void loginFun() {
         progressBar.setVisibility(View.VISIBLE);
 
         String email_i = email.getText().toString();

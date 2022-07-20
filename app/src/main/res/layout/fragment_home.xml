@@ -14,6 +14,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/locationsPicker"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/placeholder"
+            android:layout_height="30dp"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Galgotias Unviersity"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
@@ -131,7 +156,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="No Booking found 🩺"
+                            android:text="No Booking found"
                             android:layout_marginTop="10dp"
                             android:layout_marginHorizontal="20dp"
                             android:textSize="16dp"

@@ -16,11 +16,11 @@ public class pathlabModel {
 
     public pathlabModel(){}
 
-    public pathlabModel(String fullname, String phone, String adminemail,String adminId,String profilePic) {
+    public pathlabModel(String fullname, String phone, String adminemail, String id, String profilePic) {
         Fullname = fullname;
         Phone = phone;
         AdminEmail = adminemail;
-        AdminId = adminId;
+        Id = id;
         ProfilePic= profilePic;
     }
 
@@ -34,12 +34,12 @@ public class pathlabModel {
     public void setPhone(String phone) {
         Phone = phone;
     }
-    public String getAdminId(){
-        return AdminId;
+    public String getId(){
+        return Id;
     }
 
-    public void setAdminId(String adminId){
-        AdminId = adminId;
+    public void setId(String id){
+        Id = id;
     }
 
     public String getAdminEmail() {
@@ -50,7 +50,7 @@ public class pathlabModel {
         AdminEmail = userEmail;
     }
 
-    String Fullname,Phone,AdminEmail,AdminId,ProfilePic;
+    String Fullname,Phone,AdminEmail, Id,ProfilePic;
 
 
 }

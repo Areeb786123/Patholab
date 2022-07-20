@@ -12,5 +12,6 @@ public class selectedOn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selected_on);
+
     }
 }

@@ -1,9 +1,15 @@
 package com.areeb.patholab.Fragments;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -13,9 +19,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.agrawalsuneet.dotsloader.loaders.LazyLoader;
 import com.areeb.patholab.Activites.Login;
+import com.areeb.patholab.MainActivity;
 import com.areeb.patholab.R;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -36,7 +44,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class Profile extends Fragment {
 
 
-CardView card1,card2 ,card3;
+    private static final int CALL_PERMISSION_REQUEST_CODE = 112;
+    CardView card1,card2 ,card3;
 TextView  name ,email,phone;
 //LazyLoader nprogressBar;
  FirebaseAuth firebaseAuth;
@@ -45,6 +54,7 @@ TextView  name ,email,phone;
 CardView logout_btn;
 ImageView profile_image;
  FirebaseDatabase firebaseDatabase;
+ CardView callus;
 
 
     public Profile() {
@@ -79,6 +89,10 @@ ImageView profile_image;
         email = view.findViewById(R.id.email);
         phone = view.findViewById(R.id.phone);
         logout_btn = view.findViewById(R.id.logout_btn);
+        callus = view.findViewById(R.id.support);
+
+
+
 
         profile_image= view.findViewById(R.id.userImage);
 
@@ -117,6 +131,13 @@ ImageView profile_image;
         });
 
 
+        callus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//             call();
+
+            }
+        });
 
         logout_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,6 +152,27 @@ ImageView profile_image;
         });
 
 
+
+
         return view;
+    }
+
+    void call() {
+        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+            Intent callIntent = new Intent(Intent.ACTION_CALL);
+            callIntent.setData(Uri.parse("9162487800"));
+            getActivity().startActivity(callIntent);
+        } else {
+            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CALL_PHONE},
+                    CALL_PERMISSION_REQUEST_CODE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == CALL_PERMISSION_REQUEST_CODE && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            Toast.makeText(getContext(), "Permission Granted", Toast.LENGTH_SHORT).show();
+        }
     }
 }

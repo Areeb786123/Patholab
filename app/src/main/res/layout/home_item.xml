@@ -36,14 +36,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:id="@+id/LabImage"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/undraw_medicine_b1ol">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="70dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_height="70dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/LabImage"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/prof"
+                        >
 
-                </ImageView>
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+
 
                 <LinearLayout
                     android:layout_width="wrap_content"

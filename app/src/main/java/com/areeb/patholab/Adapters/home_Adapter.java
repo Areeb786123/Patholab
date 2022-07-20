@@ -60,7 +60,7 @@ public class home_Adapter extends RecyclerView.Adapter<home_Adapter.mViewHolder>
 
 
         //glide for image processing in recycler view
-        Glide.with(context).load(labmodel.getProfilePic().toString()).into(holder.Labimage);
+//        Glide.with(context).load(labmodel.getProfilePic().toString()).into(holder.Labimage);
         //clickListner
         holder.homeCradView.setOnClickListener(new View.OnClickListener() {
             @Override

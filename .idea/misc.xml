@@ -13,11 +13,14 @@
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/drawable/search_back.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/drawable/started_btn.xml" value="0.26927083333333335" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/activity_appointment.xml" value="0.2" />
-        <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/activity_details.xml" value="0.264" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/activity_details.xml" value="0.2" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/activity_login.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/activity_main.xml" value="0.23020833333333332" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/activity_main_services.xml" value="0.23020833333333332" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/activity_register.xml" value="0.1992786293958521" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/activity_selected_on.xml" value="0.23020833333333332" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/activity_service.xml" value="0.23020833333333332" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/activity_services.xml" value="0.23020833333333332" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/activity_splash.xml" value="0.2" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/activity_welcome.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/book_slot_dialoguesheet.xml" value="0.23020833333333332" />
@@ -25,8 +28,10 @@
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/fragment_profile.xml" value="0.23020833333333332" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/fragment_slots.xml" value="0.23020833333333332" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/home_item.xml" value="0.23020833333333332" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/list_of_treatment.xml" value="0.23020833333333332" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/slots_items.xml" value="0.21041666666666667" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/layout/userappointmentlay.xml" value="0.128" />
-        <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/menu/menu.xml" value="0.23020833333333332" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Patholab/app/src/main/res/menu/menu.xml" value="0.1" />
       </map>
     </option>
   </component>

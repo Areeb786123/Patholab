@@ -1,5 +1,6 @@
 package com.areeb.patholab.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -12,8 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.areeb.patholab.Activites.ServicesActivity;
 import com.areeb.patholab.Adapters.SlotsAdapter;
 
+import com.areeb.patholab.ItemClicked.SlotSelectedListener;
 import com.areeb.patholab.Model.SlotsModel;
 import com.areeb.patholab.Model.pathlabModel;
 import com.areeb.patholab.R;
@@ -28,7 +31,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 
-public class Slots extends Fragment {
+public class Slots extends Fragment implements  SlotSelectedListener {
 
 
     FirebaseAuth firebaseAuth;
@@ -68,7 +71,8 @@ public class Slots extends Fragment {
         UserAppointmentRecyclerView.setHasFixedSize(true);
         UserAppointmentRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         slotsModel = new ArrayList<>();
-        slotsAdapter = new SlotsAdapter(slotsModel);
+        slotsAdapter = new SlotsAdapter(slotsModel,getContext(),this);
+
         UserAppointmentRecyclerView.setAdapter(slotsAdapter);
 
 
@@ -80,7 +84,7 @@ public class Slots extends Fragment {
 
 
     public void getAllAppointment() {
-        fstore.collection("Users").document(firebaseAuth.getCurrentUser().getUid().toString()).collection("UserAppointments").addSnapshotListener(new EventListener<QuerySnapshot>() {
+        fstore.collection("Users").document(firebaseAuth.getCurrentUser().getUid().toString()).collection("UserAppointmentSection").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                 if (error != null) {
@@ -100,4 +104,14 @@ public class Slots extends Fragment {
     }
 
 
+    @Override
+    public void onHomeItemClicked(SlotsModel slotsModellist) {
+        Intent service = new Intent(getContext(), ServicesActivity.class);
+        service.putExtra("LabName",slotsModellist.getLabName());
+        service.putExtra("AdminEmail",slotsModellist.getAdminEmail());
+        service.putExtra("Phone",slotsModellist.getPhone());
+        service.putExtra("otp",slotsModellist.getOtp());
+
+        startActivity(service);
+    }
 }
