@@ -1,4 +1,5 @@
 # Patholab
 
 
-![Untitled](https://user-images.githubusercontent.com/56149022/228093758-04bdee08-5e0a-44ae-a2e5-96ef91432ca3.jpg)
+
+![Untitled](https://user-images.githubusercontent.com/56149022/228093999-58282eb8-63f3-41de-9ca5-07409335b071.jpg)
